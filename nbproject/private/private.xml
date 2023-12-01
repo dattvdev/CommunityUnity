@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="Group 20230725-10:42:04">
+            <file>file:/E:/Note/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/src/java/control/RejectMemberServlet.java</file>
+            <file>file:/E:/Note/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/src/java/control/ApproveControl.java</file>
+            <file>file:/E:/Note/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/src/java/control/ForgetPass.java</file>
+            <file>file:/E:/Note/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/src/java/control/ApproveMemberServlet.java</file>
+            <file>file:/E:/Note/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/src/java/dao/PayMentDAO.java</file>
+            <file>file:/E:/Note/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/src/java/dao/likeDAO.java</file>
+            <file>file:/E:/Note/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/web/HomePage.jsp</file>
+            <file>file:/E:/Note/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/src/java/dao/AccountDAO.java</file>
+            <file>file:/E:/Note/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/src/java/dao/NotificateDAO.java</file>
+        </group>
+        <group>
+            <file>file:/D:/Final_project/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/src/java/control/SignUp.java</file>
+            <file>file:/D:/Final_project/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/web/managerblogs.jsp</file>
+            <file>file:/D:/Final_project/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/web/adminPage.jsp</file>
+            <file>file:/D:/Final_project/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/web/searchblogs.jsp</file>
+            <file>file:/D:/Final_project/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/src/java/control/LoginController.java</file>
+            <file>file:/D:/Final_project/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/web/Approve.jsp</file>
+            <file>file:/D:/Final_project/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/src/java/entity/UserGoogle.java</file>
+            <file>file:/D:/Final_project/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/web/accountmanager.jsp</file>
+            <file>file:/D:/Final_project/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/web/EventDetail.jsp</file>
+            <file>file:/D:/Final_project/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/web/ApproveNotification.jsp</file>
+            <file>file:/D:/Final_project/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/web/blogs.jsp</file>
+            <file>file:/D:/Final_project/SWP391_Volunteer-359fc644390bc67731fa8fcd24529db24b753d89/web/components/footer.jsp</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,163 @@
+use Volunteer
+
+CREATE TABLE Accounts (
+   UserID INT IDENTITY(1,1) not null PRIMARY KEY,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    name NVARCHAR(255),
+	email VARCHAR(255),
+	birthDay datetime,
+	sex int,
+    phone VARCHAR(20),
+    address TEXT,
+	photo text,
+    status int NULL,
+	role int NULL,
+    token VARCHAR(255)
+);
+
+
+
+CREATE TABLE information_pages (
+    page_id INT IDENTITY(1,1) not null PRIMARY KEY,
+    text_content TEXT NOT NULL
+);
+
+CREATE TABLE volunteer_activities (
+    activity_id INT not null IDENTITY(1,1) PRIMARY KEY ,
+    activity_name NVARCHAR(100) NOT NULL,
+    description  NVARCHAR(MAX),
+    start_date datetime,
+    end_date datetime,
+<<<<<<< HEAD
+    location nVARCHAR(100),
+=======
+    location NVARCHAR(100),
+>>>>>>> origin/DAT
+   organizer_id INT,
+   numberMemBer int,
+	photo TEXT,
+    created_date datetime not null,
+    updated_date datetime not null,
+	FOREIGN KEY (organizer_id) REFERENCES Accounts (UserID),
+);
+
+///////////////////
+CREATE TABLE Pending_activity (
+    activity_id INT not null IDENTITY(1,1) PRIMARY KEY ,
+    activity_name NVARCHAR(100) NOT NULL,
+    description NVARCHAR(MAX),
+    start_date datetime,
+    end_date datetime,
+<<<<<<< HEAD
+    location nVARCHAR(100),
+=======
+    location NVARCHAR(100),
+>>>>>>> origin/DAT
+   organizer_id INT,
+   numberMemBer int,
+	photo TEXT,
+    created_date datetime not null,
+    updated_date datetime not null,
+	FOREIGN KEY (organizer_id) REFERENCES Accounts (UserID),
+);
+
+CREATE TABLE categories (
+    category_id INT not null IDENTITY(1,1) PRIMARY KEY,
+    category_name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE volunteer_participation (
+    participation_id INT not null IDENTITY(1,1) PRIMARY KEY,
+    volunteer_id INT NOT NULL,
+    activity_id INT NOT NULL,
+    registration_date DATE NOT NULL,
+    FOREIGN KEY (volunteer_id) REFERENCES Accounts (UserID),
+    FOREIGN KEY (activity_id) REFERENCES volunteer_activities (activity_id)
+);
+
+CREATE TABLE Payment (
+    payment_id INT not null PRIMARY KEY,
+    giverID INT,
+receiverID INT,
+eventID INT,
+    transaction_date datetime NOT NULL,
+    text TEXT,
+    amount DECIMAL(10, 2) NOT NULL,
+	status int,
+	FOREIGN KEY (giverID) REFERENCES Accounts (UserID),
+	FOREIGN KEY (receiverID) REFERENCES Accounts (UserID),
+	FOREIGN KEY (eventID) REFERENCES volunteer_activities (activity_id)
+
+);
+
+CREATE TABLE reports (
+    report_id INT not null IDENTITY(1,1) PRIMARY KEY,
+    user_id INT NOT NULL,
+    report_date datetime NOT NULL,
+    report_text TEXT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES Accounts (UserID)
+);
+
+
+CREATE TABLE UserOTP (
+    id INT not null IDENTITY(1,1) PRIMARY KEY,
+    userEmail NVARCHAR(255) UNIQUE,
+    otp NVARCHAR(6), 
+	otpTimestamp datetime
+
+);
+
+
+
+CREATE TABLE UserPending (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT,
+    ActivityID INT,
+    FOREIGN KEY (UserID) REFERENCES Accounts(UserID),
+    FOREIGN KEY (ActivityID) REFERENCES volunteer_activities(activity_id)
+);
+
+
+----------------------------
+
+  CREATE TABLE Blogs (
+    blog_id INT IDENTITY(1,1) not null PRIMARY KEY,
+    title nVARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+	shortcontent TEXT NOT NULL,
+    author int NOT NULL,
+    date DATE NOT NULL,
+    category nVARCHAR(50) NOT NULL, 
+	photo VARCHAR(255) NOT NULL,
+	pending int,
+		FOREIGN KEY (author) REFERENCES Accounts (UserID)
+);
+
+CREATE TABLE LikesBlogs (
+    id INT identity(1,1) PRIMARY KEY,
+    id_clicker INT,
+    id_post INT,
+    FOREIGN KEY (id_clicker) REFERENCES Accounts (UserID),   -- Assuming 'users' is the user table
+    FOREIGN KEY (id_post) REFERENCES Blogs(blog_id)        -- Assuming 'posts' is the post table
+);
+
+CREATE TABLE comments (
+    comment_id INT identity(1,1) PRIMARY KEY,
+    post_id INT, -- Foreign key referencing the post table
+   
+    comment_content TEXT,
+    comment_author_id INT, -- Foreign key referencing the user table
+	FOREIGN KEY (comment_author_id) REFERENCES Accounts (UserID),
+		FOREIGN KEY (post_id) REFERENCES Blogs (blog_id),
+    comment_date datetime
+);
+
+  create table BlogsPending(
+  id int identity(1,1) not null,
+  idPost int,
+
+ FOREIGN KEY (idPost) REFERENCES Blogs (blog_id)
+  ) 
+
+/////////////
